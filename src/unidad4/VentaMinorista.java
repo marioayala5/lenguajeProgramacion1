@@ -20,7 +20,7 @@ public class VentaMinorista {
         proTota14 = 0.0;
         proTotal5 = 0.0;
 
-        int nroProducto, cantProducto; //Numero del producto y Cantidad Vendida
+        Integer nroProducto, cantProducto; //Numero del producto y Cantidad Vendida
 
         nroProducto = 0;
         cantProducto = 0;
@@ -35,7 +35,7 @@ public class VentaMinorista {
                     System.out.printf("Escriba cantidad vendida del producto %d: ", nroProducto);
                     cantProducto = scan.nextInt();
                     switch (nroProducto) {
-                        case 1 -> proTotal1 += (producto1 * cantProducto);
+                        case 1 -> proTotal1 += (producto1 * cantProducto); 
                         case 2 -> proTotal2 += (producto2 * cantProducto);
                         case 3 -> proTotal3 += (producto3 * cantProducto);
                         case 4 -> proTota14 += (producto4 * cantProducto);
