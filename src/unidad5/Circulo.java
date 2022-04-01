@@ -18,11 +18,21 @@ public class Circulo {
             
             System.out.printf("\nEscriba el radio del circulo %d: ", i);
             r = input.nextInt();
-            areaCirculo = Math.PI*(r*r);
+            areaCirculo = circuloArea(r);
             System.out.printf("El area del circulo %d: %.2f\n", i, areaCirculo);
-            periCirculo = 2*Math.PI*r;
+            
+            periCirculo = circuloPerimetro(r);
             System.out.printf("El perimero del circulo %d: %.2f\n", i++, periCirculo);
         }
         System.out.println("GRACIAS!");
+    }
+    public static double circuloArea(double r) {
+        double areaCirculo = Math.PI*(r*r);
+        return areaCirculo;
+    }
+    
+    public static double circuloPerimetro(double r) {
+        double periCirculo = 2*Math.PI*r;
+        return periCirculo;
     }
 }
