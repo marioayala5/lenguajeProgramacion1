@@ -1,4 +1,4 @@
-package unidad11;
+package pr1;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -6,14 +6,14 @@ import javax.swing.ButtonGroup;
 import javax.swing.JComboBox;
 import javax.swing.JRadioButtonMenuItem;
 
-public class ConvertidorDeTemperatura extends javax.swing.JFrame {
+public class ConvertidorDeTemperatura1 extends javax.swing.JFrame {
 
     private final JRadioButtonMenuItem elementosEntrada[];
     private final JRadioButtonMenuItem elementosSalida[];
     private final ButtonGroup buttonGroupEntrada;
     private final ButtonGroup buttonGroupSalida;
 
-    public ConvertidorDeTemperatura() {
+    public ConvertidorDeTemperatura1() {
         initComponents();
 
         //agregamos los botones
@@ -98,6 +98,8 @@ public class ConvertidorDeTemperatura extends javax.swing.JFrame {
         );
 
         jpSalida.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Salida")), "Salida"));
+
+        cbSalida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Centígrados", "Fahrenheit", "Kelvin" }));
 
         javax.swing.GroupLayout jpSalidaLayout = new javax.swing.GroupLayout(jpSalida);
         jpSalida.setLayout(jpSalidaLayout);
@@ -224,17 +226,4 @@ public class ConvertidorDeTemperatura extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbKelvin;
     private javax.swing.JTextField tfValor;
     // End of variables declaration//GEN-END:variables
-
-//    public class Manejador implements ActionListener {
-//
-//        @Override
-//        public void actionPerformed(ActionEvent e) {
-//            for (int cuenta = 0; cuenta < elementosEntrada.length; cuenta++) {
-//                if (elementosEntrada[cuenta].isSelected()) {
-//                    
-//                }
-//            }
-//        }
-//        
-//    }
 }

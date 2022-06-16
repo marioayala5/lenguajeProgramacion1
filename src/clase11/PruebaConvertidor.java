@@ -1,11 +1,13 @@
-package unidad11;
+package clase11;
+
+import pr1.ConvertidorDeTemperatura1;
 
 public class PruebaConvertidor {
 
     public static void main(String[] args) {
-        ConvertidordeTemperatura cdt = new ConvertidordeTemperatura();
+        ConvertidorDeTemperatura1 cdt = new ConvertidorDeTemperatura1();
         cdt.setVisible(true);
-        cdt.setTitle("Convertidor de Temperatura");
         cdt.setLocationRelativeTo(null);
     }
+    
 }

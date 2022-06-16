@@ -10,19 +10,19 @@
     </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="jMenu1">
+        <Menu class="javax.swing.JMenu" name="mArchivo">
           <Properties>
             <Property name="mnemonic" type="int" value="97"/>
             <Property name="text" type="java.lang.String" value="Archivo"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+            <MenuItem class="javax.swing.JMenuItem" name="miSalir">
               <Properties>
                 <Property name="mnemonic" type="int" value="115"/>
                 <Property name="text" type="java.lang.String" value="Salir"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miSalirActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -41,7 +41,7 @@
                 <Property name="text" type="java.lang.String" value="Entrada"/>
               </Properties>
               <SubComponents>
-                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="rbmCentigrados">
+                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="bmiCentigrados">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroup2"/>
@@ -50,7 +50,7 @@
                     <Property name="text" type="java.lang.String" value="Cent&#xed;grados"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="rbmFa">
+                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="bmiFahrenheit">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroup2"/>
@@ -58,7 +58,7 @@
                     <Property name="text" type="java.lang.String" value="Fahrenheit"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="rbmKelvin">
+                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="bmiKelvin">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroup2"/>
@@ -73,7 +73,7 @@
                 <Property name="text" type="java.lang.String" value="Salida"/>
               </Properties>
               <SubComponents>
-                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="rbmScentigrados">
+                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="bmiCentigradosSalida">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroup3"/>
@@ -82,7 +82,7 @@
                     <Property name="text" type="java.lang.String" value="Cent&#xed;grados"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="rbmSfa">
+                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="bmiFahrenheitSalida">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroup3"/>
@@ -90,7 +90,7 @@
                     <Property name="text" type="java.lang.String" value="Fahrenheit"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="rbmSkelvin">
+                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="bmikelvinSalida">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroup3"/>
@@ -130,23 +130,23 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" max="32767" attributes="0"/>
+              <Component id="jp1" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
+              <Component id="jp1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="19" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" name="jp1">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -160,33 +160,33 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel4" max="32767" attributes="0"/>
+                  <Component id="jp2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jp3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jp4" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="19" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jPanel2" max="32767" attributes="0"/>
-                      <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="jp4" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="jp3" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jp2" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace min="0" pref="17" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel2">
+        <Container class="javax.swing.JPanel" name="jp2">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -198,7 +198,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="rbFa" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbFahrenheit" min="-2" max="-2" attributes="0"/>
                   <Component id="rbKelvin" min="-2" max="-2" attributes="0"/>
                   <Component id="rbCentigrado" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -209,10 +209,10 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="rbCentigrado" min="-2" pref="22" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="rbFa" min="-2" max="-2" attributes="0"/>
+                      <Component id="rbFahrenheit" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="rbKelvin" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="31" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -226,7 +226,7 @@
                 <Property name="text" type="java.lang.String" value="Cent&#xed;grados"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="rbFa">
+            <Component class="javax.swing.JRadioButton" name="rbFahrenheit">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
@@ -244,7 +244,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanel3">
+        <Container class="javax.swing.JPanel" name="jp3">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -289,7 +289,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanel4">
+        <Container class="javax.swing.JPanel" name="jp4">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -305,13 +305,13 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="tfCuadroTexto" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="tfTexto" min="-2" pref="71" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lResultado" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="bConvertir" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btConvertir" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="80" max="32767" attributes="0"/>
+                      <EmptySpace pref="59" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -320,28 +320,28 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="tfCuadroTexto" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfTexto" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lResultado" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="bConvertir" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="14" max="32767" attributes="0"/>
+                      <Component id="btConvertir" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="tfCuadroTexto">
+            <Component class="javax.swing.JTextField" name="tfTexto">
               <Properties>
                 <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="lResultado">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Resultado"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="bConvertir">
+            <Component class="javax.swing.JButton" name="btConvertir">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Convertir"/>
               </Properties>
