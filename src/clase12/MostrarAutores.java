@@ -55,6 +55,14 @@ public class MostrarAutores {
 
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(MostrarAutores.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                resultado.close();
+                instruccion.close();
+                conexion.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(MostrarAutores.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
 
     }
