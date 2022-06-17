@@ -6,8 +6,10 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.sql.PreparedStatement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class ABMAutores extends javax.swing.JFrame {
@@ -213,5 +215,50 @@ public class ABMAutores extends javax.swing.JFrame {
         }
         //agrega el modelo a la tabla
         tAutor.setModel(modeloTabla);
+    }
+    
+    public void guardarAutor () {
+        Autores a = new Autores();
+        a.setNombrePila(tfNombrePila.getText());
+        a.setApellidoPaterno(tfApellidoPaterno.getText());
+        
+        int respuesta;
+        try {
+            PreparedStatement ps = conexion.prepareStatement("INSERT INTO autores(nombrepila, apellidopaterno) VALUES (?,?)");
+            ps.setString(1, a.getNombrePila());
+            ps.setString(2, a.getApellidoPaterno());
+            respuesta = ps.executeUpdate();
+            cargarTabla();
+        } catch (SQLException ex) {
+            Logger.getLogger(ABMAutores.class.getName()).log(Level.SEVERE, null, ex);
+            respuesta = ex.getErrorCode();
+        }
+        
+        if (respuesta == 1) {
+            JOptionPane.showMessageDialog(rootPane, "Registro del autor exitoso", "Sistema", JOptionPane.INFORMATION_MESSAGE);
+            tfNombrePila.setText(null);
+            tfApellidoPaterno.setText(null);
+            tfNombrePila.grabFocus();
+        }
+    }
+    
+    private void buscarAutor(int idAutor) {
+        try {
+            PreparedStatement ps = conexion.prepareStatement("SELECT * FROM autores WHERE idautor= ?");
+            ps.setInt(1, idAutor);
+            ResultSet rs = ps.executeQuery();
+            autores = new Autores();
+            if (rs.next()) {
+                autores.setIdAutor(rs.getInt("idautor"));
+                autores.setNombrePila(rs.getString("nombrepila"));
+                autores.setApellidoPaterno(rs.getString("apellidopaterno"));
+                tfNombrePila.setText(autores.getNombrePila());
+                tfApellidoPaterno.setText(autores.getApellidoPaterno());
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ABMAutores.class.getName()).log(Level.SEVERE, null, ex);
+            autores = null;
+        }
+        
     }
 }
