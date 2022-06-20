@@ -61,6 +61,7 @@ public class ABMAutores extends javax.swing.JFrame {
         bEliminar = new javax.swing.JButton();
         mbMenu = new javax.swing.JMenuBar();
         mArchivo = new javax.swing.JMenu();
+        miInformacion = new javax.swing.JMenuItem();
         miSalir = new javax.swing.JMenuItem();
         mABM = new javax.swing.JMenu();
         miGuardar = new javax.swing.JMenuItem();
@@ -172,6 +173,14 @@ public class ABMAutores extends javax.swing.JFrame {
 
         mArchivo.setText("Archivo");
 
+        miInformacion.setText("Información");
+        miInformacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miInformacionActionPerformed(evt);
+            }
+        });
+        mArchivo.add(miInformacion);
+
         miSalir.setText("Salir");
         miSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -281,6 +290,10 @@ public class ABMAutores extends javax.swing.JFrame {
         eliminarAutor(idAutor);
     }//GEN-LAST:event_miEliminarActionPerformed
 
+    private void miInformacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miInformacionActionPerformed
+        JOptionPane.showMessageDialog(rootPane, "Clase 12 - Conexion a base de datos\nHecho por Carlos Chiriani\nMario Ayala", "Sistema", JOptionPane.PLAIN_MESSAGE);
+    }//GEN-LAST:event_miInformacionActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bEliminar;
     private javax.swing.JButton bGuardar;
@@ -292,6 +305,7 @@ public class ABMAutores extends javax.swing.JFrame {
     private javax.swing.JMenuBar mbMenu;
     private javax.swing.JMenuItem miEliminar;
     private javax.swing.JMenuItem miGuardar;
+    private javax.swing.JMenuItem miInformacion;
     private javax.swing.JMenuItem miModificar;
     private javax.swing.JMenuItem miSalir;
     private javax.swing.JPanel pAutor;
